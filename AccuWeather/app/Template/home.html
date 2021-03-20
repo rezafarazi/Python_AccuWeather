@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather For All Cities</title>
+</head>
+<body style="overflow: hidden;">
+    {% load static %}
+    <div style="width: 100vw;height: 100vh;display: flex;justify-content: center;align-items: center;">
+        <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather10-512.png"/>
+        <form method="GET" action="/Result">
+            <input name="City" type="search" style="outline: none;width: 90%;padding: 10px 10px;border: 1px solid #CCC;border-radius: 10px;font-size: 28px;" placeholder="Enter Wather City"/>
+        </form>
+    </div>
+    <br>
+
+    {% if message %}
+    <p style="position: fixed;top: 0;width:100vw;background:#F00;margin: 0;padding: 10px;left: 0;text-align: center;color: #FFF;">{{message}}</p>
+    {% endif %}
+
+</body>
+</html>
+
